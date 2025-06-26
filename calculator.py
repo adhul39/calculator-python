@@ -26,7 +26,7 @@ screen.title("Calculator") # Set window title as calculator
 screen.configure(bg="gray")
 screen.geometry("250x290")
 # Calculator screen
-cal_display = Entry(screen,justify="center",width=30,state="readonly") # Calculator screen align center and give a width and set in as readomly
+cal_display = Entry(screen,justify="center",width=30,state="readonly") # Calculator screen align center and give a width and set in as readonly
 cal_display.pack(pady=15,ipady=10) # Give it a padding
 
 # Buttons layout
