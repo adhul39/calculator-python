@@ -15,8 +15,7 @@ def evaluate():
     try:
         result = eval(cal_display.get())
         cal_display.delete(0,END)
-        cal_display.insert(0,
-str(result))
+        cal_display.insert(0,str(result))
     except:
         cal_display.delete(0,END)
         cal_display.insert(0,"Error")
@@ -27,7 +26,7 @@ screen.title("Calculator") # Set window title as calculator
 screen.configure(bg="gray")
 screen.geometry("250x290")
 # Calculator screen
-cal_display = Entry(screen,justify="center",width=30,state="readonly") # Calculator screen align center and give a width
+cal_display = Entry(screen,justify="center",width=30,state="readonly") # Calculator screen align center and give a width and set in as readomly
 cal_display.pack(pady=15,ipady=10) # Give it a padding
 
 # Buttons layout
@@ -41,7 +40,7 @@ buttons = [
 
 for (text, x, y) in buttons:
     if text == '=':
-        Button(screen, text=text,
+        Button( screen,text=text,
 width=3,height=1, command=evaluate).place(x=x ,y=y)
     elif text == 'C' :
         Button(screen, text=text,
